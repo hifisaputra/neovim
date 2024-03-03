@@ -17,7 +17,7 @@ return require('packer').startup(function(use)
 	  end
   })
 
-  use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
+  use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate', requires = { {'nvim-ts-autotag'} }})
   use('nvim-treesitter/playground')
   use('theprimeagen/harpoon')
   use('tpope/vim-fugitive')
@@ -53,6 +53,8 @@ return require('packer').startup(function(use)
   use('navarasu/onedark.nvim')
 
   use("nvim-lua/plenary.nvim")
+
+  use('sheodox/projectlaunch.nvim')
 
   use {
       'laytan/tailwind-sorter.nvim',
